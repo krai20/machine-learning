@@ -82,13 +82,13 @@ class LearningAgent(Agent):
                 action = random.choice(self.valid_actions)
             else:
                 maxQ = self.get_maxQ(self.state)
+                action_list = []
                 for act, value in self.Q[state].iteritems():
                     if value == maxQ:
-                        action = act
+                        action_list.append(act) # append action list with all actions equal to max Q value
+                action = random.choice(action_list) # choose an action randomly from action list
 
         return action
-
-        # TODO: Learn policy based on state, action, reward
 
 
     def learn(self, state, action, reward):
