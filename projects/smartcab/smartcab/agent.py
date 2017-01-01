@@ -43,7 +43,10 @@ class LearningAgent(Agent):
         inputs = self.env.sense(self)           # Visual input - intersection light and traffic
         deadline = self.env.get_deadline(self)  # Remaining deadline
 
-        state = (waypoint, str(inputs))
+        state = (waypoint, str(inputs)) # variable deadline is not being used
+                                        # as it doesn't seem necessary to
+                                        # learn a reasonable rate of safety and reliability and
+                                        # increases the state space
 
         return state
 
