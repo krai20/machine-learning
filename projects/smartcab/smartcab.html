@@ -1536,7 +1536,16 @@ For learning both safety and efficiency, all of these features are appropriate, 
 <li>deadline = range(25)<br>
 <strong>Number of states = 3 x 2 x 4 x 4 x 4 X 25= 9600</strong></li>
 </ul>
-<p>Given the environment and how it is simulated, it is not possible for the driving agent to learn an optimal policy for each state with a resonable number of training trails, therefore in my code I do not use the variable deadline which reduces the state space to reach the desired level of safety and reliability.</p>
+<p>Given the environment and how it is simulated, it is not possible for the driving agent to learn an optimal policy for each state with a resonable number of training trails, therefore in my code I do not use the variable deadline which reduces the state space to reach the desired level of safety and reliability. 
+State Space used in code only includes the following variables:</p>
+<ul>
+<li>waypoint = [forward, left, right]  </li>
+<li>light = [Red, green]  </li>
+<li>oncoming= [None, forward, left, right]  </li>
+<li>left= [None, forward, left, right]  </li>
+<li>right= [None, forward, left, right]<br>
+<strong>Number of states in code = 3 x 2 x 4 x 4 x 4 = 384</strong></li>
+</ul>
 
 </div>
 </div>
